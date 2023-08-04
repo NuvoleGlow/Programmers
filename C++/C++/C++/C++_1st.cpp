@@ -2038,8 +2038,953 @@
 
 #pragma endregion
 
-#pragma region
+#pragma region 이진수 더하기
 
+// #include <string>
+// 
+// using namespace std;
+// 
+// string solution(string bin1, string bin2)
+// {
+//     string answer = "";
+//     unsigned int bint3 = stoi(bin1) + stoi(bin2);
+//     if (bint3 == 0)
+//     {
+//         answer.push_back('0');
+//         return answer;
+//     }
+//     while (bint3 > 0)
+//     {
+//         if (bint3 % 10 == 3)
+//         {
+//             bint3 += 10;
+//             answer.push_back('1');
+//         }
+//         else if (bint3 % 10 == 2)
+//         {
+//             bint3 += 10;
+//             answer.push_back('0');
+//         }
+//         else if (bint3 % 10 == 1)
+//         {
+//             answer.push_back('1');
+//         }
+//         else if (bint3 % 10 == 0)
+//         {
+//             answer.push_back('0');
+//         }
+//         bint3 /= 10;
+//     }
+//     for (int i = 0; i <= answer.size() / 2; i++)
+//     {
+//         swap(answer[i], answer[answer.size() - 1 - i]);
+//     }
+//     return answer;
+// }
 
+#pragma endregion
+
+#pragma region 행렬의 덧셈
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<vector<int>> solution(vector<vector<int>> arr1, vector<vector<int>> arr2)
+// {
+//     vector<vector<int>> answer;
+//     vector<int> nul;
+//     for (int i = 0; i < arr1.size(); i++)
+//     {
+//         answer.push_back(nul);
+//         for (int j = 0; j < arr1[i].size(); j++)
+//         {
+//             answer[i].push_back(0);
+//             answer[i][j] = arr1[i][j] + arr2[i][j];
+//         }
+//     }
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 문자열 다루기 기본
+
+// #include <string>
+// #include <iostream>
+// 
+// using namespace std;
+// 
+// bool solution(string s)
+// {
+//     if (s.size() == 4 || s.size() == 6)
+//     {
+//         for (int i = 0; i < s.size(); i++)
+//         {
+//             if ((s[i] <= 90 && s[i] >= 65) || (s[i] <= 122 && s[i] >= 97))
+//                 return false;
+//         }
+//         return true;
+//     }
+//     return false;
+// }
+
+#pragma endregion
+
+#pragma region 부족한 금액 계산하기
+
+// using namespace std;
+// 
+// long long solution(int price, int money, int count)
+// {
+//     long long answer = (1 + count) * count / 2;
+//     answer *= price;
+//     answer -= money;
+// 
+//     if (answer < 0)
+//         answer = 0;
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region JadenCase 문자열 만들기
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// string solution(string s)
+// {
+//     for (int i = 0; i < s.size(); i++)
+//     {
+//         if (s[i] > 64 && s[i] < 91)
+//         {
+//             if (s[i - 1] != ' ')
+//             {
+//                 s[i] = s[i] + 32;
+//             }
+//         }
+//         if (s[i] == ' ')
+//         {
+//             if (s[i + 1] > 96 && s[i + 1] < 123)
+//             {
+//                 s[i + 1] = s[i + 1] - 32;
+//             }
+//         }
+//         if (s[0] > 96 && s[0] < 123)
+//         {
+//             s[0] = s[0] - 32;
+//         }
+//     }
+//     return s;
+// }
+
+#pragma endregion
+
+#pragma region 최솟값 만들기
+
+// #include <vector>
+// #include <algorithm>
+// 
+// using namespace std;
+// 
+// int solution(vector<int> A, vector<int> B)
+// {
+//     int answer = 0;
+//     sort(A.begin(), A.end());
+//     sort(B.begin(), B.end(), greater<int>());
+// 
+//     for (int i = 0; i < A.size(); i++)
+//     {
+//         answer += A[i] * B[i];
+//     }
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 최대공약수와 최소공배수
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// int small(int n, int m)
+// {
+//     if (n % m == 0)
+//     {
+//         return m;
+//     }
+//     else if (m % n == 0)
+//     {
+//         return n;
+//     }
+//     else
+//     {
+//         int a = n > m ? n : m;
+//         int b = 1;
+//         for (int i = 0; i < a; i++)
+//         {
+//             if (n % (i + 1) == 0 && m % (i + 1) == 0)
+//                 b = i + 1;
+//         }
+//         return b;
+//     }
+// }
+// 
+// int big(int n, int m)
+// {
+//     if (n % m == 0)
+//     {
+//         return n;
+//     }
+//     else if (m % n == 0)
+//     {
+//         return m;
+//     }
+//     else
+//     {
+//         int a = small(n, m);
+//         int b = n / a;
+// 
+//         return b * m;
+//     }
+// }
+// 
+// vector<int> solution(int n, int m)
+// {
+//     vector<int> answer;
+//     answer.push_back(small(n, m));
+//     answer.push_back(big(n, m));
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 올바른 괄호
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// bool solution(string s)
+// {
+//     int stack = 0;
+//     int check = 0;
+//     for (int i = 0; i < s.size(); i++)
+//     {
+//         if (s[0] == ')')
+//             return false;
+//         if (s[i] == '(')
+//             stack++;
+//         else
+//             stack--;
+//         if (stack == 0)
+//         {
+//             check = i + 1;
+//             if (s[check] == ')')
+//                 return false;
+//         }
+// 
+//     }
+//     if (stack != 0)
+//         return false;
+//     else
+//         return true;
+// }
+
+#pragma endregion
+
+#pragma region 예산
+
+// #include <vector>
+// #include <algorithm>
+// 
+// using namespace std;
+// 
+// int solution(vector<int> d, int budget)
+// {
+//     sort(d.begin(), d.end());
+// 
+//     int acc = 0;
+// 
+//     for (int i = 0; i < d.size(); i++)
+//     {
+//         if (acc + d[i] > budget)
+//             return i;
+//         acc += d[i];
+//     }
+// 
+//     return d.size();
+// }
+
+#pragma endregion
+
+#pragma region 캐릭터의 좌표
+
+// #include <string>
+// #include <vector>
+// #include <math.h>
+// 
+// using namespace std;
+// 
+// vector<int> solution(vector<string> keyinput, vector<int> board)
+// {
+//     vector<int> answer;
+//     int x = 0;
+//     int y = 0;
+// 
+//     for (int i = 0; i < keyinput.size(); i++)
+//     {
+//         if (keyinput[i][0] == 'u' && abs(y) < abs(board[1] / 2))
+//         {
+//             y++;
+//         }
+//         else if (keyinput[i][0] == 'u' && y == -abs(board[1] / 2))
+//         {
+//             y++;
+//         }
+//         if (keyinput[i][0] == 'd' && abs(y) < abs(board[1] / 2))
+//         {
+//             y--;
+//         }
+//         else if (keyinput[i][0] == 'd' && y == abs(board[1] / 2))
+//         {
+//             y--;
+//         }
+//         if (keyinput[i][0] == 'l' && abs(x) < abs(board[0] / 2))
+//         {
+//             x--;
+//         }
+//         else if (keyinput[i][0] == 'l' && x == abs(board[0] / 2))
+//         {
+//             x--;
+//         }
+//         if (keyinput[i][0] == 'r' && abs(x) < abs(board[0] / 2))
+//         {
+//             x++;
+//         }
+//         else if (keyinput[i][0] == 'r' && x == -abs(board[0] / 2))
+//         {
+//             x++;
+//         }
+//     }
+//     answer.push_back(x);
+//     answer.push_back(y);
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 같은 숫자는 싫어
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<int> solution(vector<int> arr)
+// {
+//     vector<int> answer;
+//     int temp = -1;
+// 
+//     for (int i = 0; i < arr.size(); i++)
+//     {
+//         if (arr[i] != temp)
+//         {
+//             answer.push_back(arr[i]);
+//             temp = arr[i];
+//         }
+//     }
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 종이 자르기
+
+// using namespace std;
+// 
+// int solution(int M, int N)
+// {
+//     return M * N - 1;
+// }
+
+#pragma endregion
+
+#pragma region 문자열 계산하기
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// int solution(string my_string)
+// {
+//     int answer = 0;
+//     string temp = "";
+//     bool minus = false;
+//     for (int i = 0; i < my_string.size(); i++)
+//     {
+//         if (my_string[i] == ' ' && minus == true)
+//         {
+//             answer -= stoi(temp);
+//             temp = "";
+//             if (my_string[i + 1] == '+')
+//                 minus = false;
+//             i += 2;
+//             continue;
+//         }
+//         else if (my_string[i] == ' ' && minus == false)
+//         {
+//             answer += stoi(temp);
+//             temp = "";
+//             if (my_string[i + 1] == '-')
+//                 minus = true;
+//             i += 2;
+//             continue;
+//         }
+//         else
+//         {
+//             temp.push_back(my_string[i]);
+//         }
+//     }
+//     if (minus == true)
+//     {
+//         answer -= stoi(temp);
+//     }
+//     if (minus == false)
+//     {
+//         answer += stoi(temp);
+//     }
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 문자열 밀기
+
+// #include <string>
+// #include <vector>
+// 
+// using namespace std;
+// 
+// int solution(string A, string B)
+// {
+//     vector<string> C;
+//     C.push_back(A);
+//     for (int i = 0; i < A.size(); i++)
+//     {
+//         if (C[i] == B)
+//             return i;
+//         C.push_back("");
+//         C[i + 1].push_back(C[i][C[i].size() - 1]);
+//         for (int j = 0; j < C[i].size() - 1; j++)
+//         {
+//             C[i + 1].push_back(C[i][j]);
+//         }
+//     }
+//     return -1;
+// }
+
+#pragma endregion
+
+#pragma region 이상한 문자 만들기
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// string solution(string s)
+// {
+//     int count = 0;
+// 
+//     for (int i = 0; i < s.size(); i++)
+//     {
+//         if (s[i] == ' ')
+//         {
+//             count = 0;
+//             continue;
+//         }
+//         if (count % 2 == 0)
+//         {
+//             count++;
+//             if (s[i] > 96)
+//             {
+//                 s[i] = s[i] - 32;
+//             }
+//             continue;
+//         }
+//         if (count % 2 == 1)
+//         {
+//             count++;
+//             if (s[i] < 96)
+//             {
+//                 s[i] = s[i] + 32;
+//             }
+//             continue;
+//         }
+//     }
+// 
+//     return s;
+// }
+
+#pragma endregion
+
+#pragma region 대문자로 바꾸기
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// string solution(string myString)
+// {
+//     for (int i = 0; i < myString.size(); i++)
+//     {
+//         if (myString[i] > 96)
+//             myString[i] = myString[i] - 32;
+//     }
+// 
+//     return myString;
+// }
+
+#pragma endregion
+
+#pragma region 문자열로 변환
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// string solution(int n)
+// {
+//     string answer = to_string(n);
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 문자열의 앞의 n글자
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// string solution(string my_string, int n)
+// {
+//     string answer = "";
+//     for (int i = 0; i < n; i++)
+//     {
+//         answer.push_back(my_string[i]);
+//     }
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 문자열 정수의 합
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// int solution(string num_str)
+// {
+// 	int answer = 0;
+// 	while (num_str.size() > 0)
+// 	{
+// 		string last = "0";
+// 		last.push_back(num_str[num_str.size() - 1]);
+// 		answer += stoi(last);
+// 		num_str.pop_back();
+// 	}
+// 	return answer;
+// }
+
+#pragma endregion
+
+#pragma region rny_string
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// string solution(string rny_string)
+// {
+//     string answer = "";
+//     string rn = "rn";
+// 
+//     for (int i = 0; i < rny_string.size(); i++)
+//     {
+//         answer.push_back(rny_string[i]);
+//         if (rny_string[i] == 'm')
+//         {
+//             answer.pop_back();
+//             answer.push_back(rn[0]);
+//             answer.push_back(rn[1]);
+//         }
+//     }
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region n 번째 원소부터
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<int> solution(vector<int> num_list, int n)
+// {
+//     vector<int> answer;
+// 
+//     for (int i = n-1; i < num_list.size(); i++)
+//     {
+//         answer.push_back(num_list[i]);
+//     }
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 마지막 두 원소
+// 
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<int> solution(vector<int> num_list)
+// {
+//     if (num_list[num_list.size() - 1] > num_list[num_list.size() - 2])
+//         num_list.push_back(num_list[num_list.size() - 1] - num_list[num_list.size() - 2]);
+//     else
+//         num_list.push_back(num_list[num_list.size() - 1] * 2);
+//     return num_list;
+// }
+// 
+#pragma endregion
+
+#pragma region 첫 번째로 나오는 음수
+// 
+// #include <vector>
+// 
+// using namespace std;
+// 
+// int solution(vector<int> num_list)
+// {
+//     for (int i = 0; i < num_list.size(); i++)
+//     {
+//         if (num_list[i] < 0)
+//         {
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+// 
+#pragma endregion
+
+#pragma region 접두사인지 확인하기
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// int solution(string my_string, string is_prefix)
+// {
+//     for (int i = 0; i < is_prefix.size(); i++)
+//     {
+//         if (is_prefix[i] != my_string[i])
+//             return 0;
+//     }
+//     return 1;
+// }
+
+#pragma endregion
+
+#pragma region 문자열의 뒤의 n글자
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// string solution(string my_string, int n)
+// {
+//     string answer = "";
+//     for (int i = my_string.size() - n; i < my_string.size(); i++)
+//     {
+//         answer.push_back(my_string[i]);
+//     }
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region n보다 커질 때까지 더하기
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// int solution(vector<int> numbers, int n)
+// {
+//     int answer = 0;
+//     int i = 0;
+// 
+//     while (answer <= n)
+//     {
+//         answer += numbers[i];
+//         i++;
+//     }
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 조건에 맞게 수열 변환하기 3
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<int> solution(vector<int> arr, int k)
+// {
+// 	if (k % 2 == 0)
+// 	{
+// 		for (int i = 0; i < arr.size(); i++)
+// 		{
+// 			arr[i] += k;
+// 		}
+// 	}
+// 	else
+// 	{
+// 		for (int i = 0; i < arr.size(); i++)
+// 		{
+// 			arr[i] *= k;
+// 		}
+// 	}
+// 	return arr;
+// }
+
+#pragma endregion
+
+#pragma region 길이에 따른 연산
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// int solution(vector<int> num_list)
+// {
+// 	int answer = 0;
+// 
+// 	if (num_list.size() > 10)
+// 	{
+// 		answer = 0;
+// 		for (int i = 0; i < num_list.size(); i++)
+// 		{
+// 			answer += num_list[i];
+// 		}
+// 	}
+// 	else
+// 	{
+// 		answer = 1;
+// 		for (int i = 0; i < num_list.size(); i++)
+// 		{
+// 			answer *= num_list[i];
+// 		}
+// 	}
+// 	return answer;
+// }
+
+#pragma endregion
+
+#pragma region 수 조작하기 1
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// int solution(int n, string control)
+// {
+//     for (int i = 0; i < control.size(); i++)
+//     {
+//         if (control[i] == 'w')
+//             n += 1;
+//         else if (control[i] == 's')
+//             n -= 1;
+//         else if (control[i] == 'd')
+//             n += 10;
+//         else
+//             n -= 10;
+//     }
+// 
+//     return n;
+// }
+
+#pragma endregion
+
+#pragma region 부분 문자열인지 확인하기
+// 
+// #include <string>
+// #include <algorithm>
+// 
+// using namespace std;
+// 
+// int solution(string my_string, string target)
+// {
+// 	string::iterator it;
+// 	it = search(my_string.begin(), my_string.end(), target.begin(), target.end());
+// 	if (it != my_string.end())
+// 		return 1;
+// 	return 0;
+// }
+// 
+#pragma endregion
+
+#pragma region 이어 붙인 수
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// int solution(vector<int> num_list)
+// {
+//     int a = 0;
+//     int b = 0;
+// 
+//     for (int i = 0; i < num_list.size(); i++)
+//     {
+//         if (num_list[i] % 2 == 0)
+//             a = num_list[i] + a * 10;
+//         else
+//             b = num_list[i] + b * 10;
+//     }
+// 
+//     return a+b;
+// }
+
+#pragma endregion
+
+#pragma region 카운트 업
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<int> solution(int start, int end)
+// {
+//     vector<int> answer;
+// 
+//     for (int i = start; i <= end; i++)
+//     {
+//         answer.push_back(i);
+//     }
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 공백으로 구분하기 1
+
+// #include <string>
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<string> solution(string my_string)
+// {
+//     vector<string> answer;
+//     string container = "";
+// 
+//     for (int i = 0; i < my_string.size(); i++)
+//     {
+//         if (my_string[i] == ' ')
+//         {
+//             answer.push_back(container);
+//             container = "";
+//         }
+//         else
+//             container.push_back(my_string[i]);
+//     }
+//     answer.push_back(container);
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 조건에 맞게 수열 변환하기 1
+
+// #include <string>
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<int> solution(vector<int> arr)
+// {
+//     for (int i = 0; i < arr.size(); i++)
+//     {
+//         if (arr[i] >= 50 && arr[i] % 2 == 0)
+//         {
+//             arr[i] /= 2;
+//         }
+//         else if (arr[i] < 50 && arr[i] % 2 != 0)
+//         {
+//             arr[i] *= 2;
+//         }
+//     }
+// 
+//     return arr;
+// }
+
+#pragma endregion
+
+#pragma region 카운트 다운
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<int> solution(int start, int end)
+// {
+//     vector<int> answer;
+// 
+//     for (int i = start; i >= end; i--)
+//     {
+//         answer.push_back(i);
+//     }
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 배열 만들기 1
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<int> solution(int n, int k)
+// {
+//     vector<int> answer;
+// 
+//     for (int i = 1; i <= n; i++)
+//     {
+//         if (i % k == 0)
+//             answer.push_back(i);
+//     }
+// 
+//     return answer;
+// }
 
 #pragma endregion
