@@ -2988,3 +2988,69 @@
 // }
 
 #pragma endregion
+
+#pragma region 원소들의 곱과 합
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// int solution(vector<int> num_list)
+// {
+//     int a = 1;
+//     int b = 0;
+//     
+//     for (int i = 0; i < num_list.size(); i++)
+//     {
+//         a *= num_list[i];
+//         b += num_list[i];
+//     }
+//     b *= b;
+// 
+//     if (a < b)
+//         return 1;
+//     else
+//         return 0;
+// }
+
+#pragma endregion
+
+#pragma region n개 간격의 원소들
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<int> solution(vector<int> num_list, int n)
+// {
+//     vector<int> answer;
+// 
+//     for (int i = 0; i < num_list.size(); i++)
+//     {
+//         if (i % n == 0)
+//             answer.push_back(num_list[i]);
+//     }
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 접미사인지 확인하기
+
+// #include <string>
+// #include <algorithm>
+// 
+// using namespace std;
+// 
+// int solution(string my_string, string is_suffix)
+// {
+// 	int start = my_string.size() - is_suffix.size();
+// 
+// 	if (equal(my_string.begin() + start, my_string.end(), is_suffix.begin()))
+// 		return 1;
+// 	return 0;
+// }
+
+#pragma endregion
+
