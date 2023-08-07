@@ -3054,3 +3054,66 @@
 
 #pragma endregion
 
+#pragma region 꼬리 문자열
+// 
+// #include <string>
+// #include <vector>
+// #include <algorithm>
+// 
+// using namespace std;
+// 
+// string solution(vector<string> str_list, string ex)
+// {
+//     string answer = "";
+//     vector<bool> checks;
+// 
+//     for (int i = 0; i < str_list.size(); i++)
+//     {
+//         for (int j = 0; j < str_list[i].size(); j++)
+//         {
+//             bool not_same = true;
+//             if (str_list[i][j] == ex[0])
+//             {
+//                 int count = 0;
+//                 while (true)
+//                 {
+//                     count++;
+//                     if (count == ex.size())
+//                         break;
+//                     if (str_list[i][j + count] != ex[count])
+//                         break;
+//                 }
+//                 if (count == ex.size())
+//                 {
+//                     not_same = false;
+//                     checks.push_back(not_same);
+//                     break;
+//                 }
+//             }
+//             if (j == str_list[i].size() - 1 && not_same == true)
+//             {
+//                 checks.push_back(not_same);
+//             }
+//         }
+//     }
+//     for (int i = 0; i < checks.size(); i++)
+//     {
+//         if (checks[i] == true)
+//         {
+//             for (int j = 0; j < str_list[i].size(); j++)
+//             {
+//                 answer.push_back(str_list[i][j]);
+//             }
+//         }
+//     }
+// 
+//     return answer;
+// }
+// 
+#pragma endregion
+
+#pragma region
+
+
+
+#pragma endregion
