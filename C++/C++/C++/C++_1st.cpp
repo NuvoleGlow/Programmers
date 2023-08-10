@@ -3112,8 +3112,148 @@
 // 
 #pragma endregion
 
-#pragma region
+#pragma region 배열에서 문자열 대소문자 변환하기
 
+// #include <string>
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<string> solution(vector<string> strArr)
+// {
+//     for (int i = 0; i < strArr.size(); i++)
+//     {
+//         for (int j = 0; j < strArr[i].size(); j++)
+//         {
+//             if (i % 2 == 0)
+//             {
+//                 if (strArr[i][j] < 91)
+//                 {
+//                     strArr[i][j] += 32;
+//                 }
+//             }
+//             if (i % 2 == 1)
+//             {
+//                 if (strArr[i][j] > 96)
+//                 {
+//                     strArr[i][j] -= 32;
+//                 }
+//             }
+//         }
+//     }
+// 
+//     return strArr;
+// }
 
+#pragma endregion
+
+#pragma region 글자 이어 붙여 문자열 만들기
+
+// #include <string>
+// #include <vector>
+// 
+// using namespace std;
+// 
+// string solution(string my_string, vector<int> index_list)
+// {
+//     string answer = "";
+// 
+//     for (int i = 0; i < index_list.size(); i++)
+//     {
+//         answer.push_back(my_string[index_list[i]]);
+//     }
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 공백으로 구분하기 2
+
+// #include <string>
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<string> solution(string my_string)
+// {
+//     vector<string> answer;
+//     string extra = "";
+// 
+//     for (int i = 0; i < my_string.size(); i++)
+//     {
+//         if (my_string[i] > 64 && my_string[i] < 91)
+//         {
+//             extra.push_back(my_string[i]);
+//         }
+//         else if (my_string[i] > 96 && my_string[i] < 123)
+//         {
+//             extra.push_back(my_string[i]);
+//         }
+//         else
+//         {
+//             if (extra != "")
+//             {
+//                 answer.push_back(extra);
+//                 extra = "";
+//             }
+//         }
+//     }
+//     if (extra != "")
+//     {
+//         answer.push_back(extra);
+//         extra = "";
+//     }
+// 
+//     return answer;
+// }
+
+#pragma endregion
+
+#pragma region 문자열 바꿔서 찾기
+
+// #include <string>
+// #include <vector>
+// #include <algorithm>
+// 
+// using namespace std;
+// 
+// int solution(string myString, string pat)
+// {
+//     for (int i = 0; i < myString.size(); i++)
+//     {
+//         if (myString[i] == 65)
+//         {
+//             myString[i] = 66;
+//         }
+//         else
+//         {
+//             myString[i] = 65;
+//         }
+//     }
+// 
+//     for (int i = 0; i < myString.size(); i++)
+//     {
+//         if (myString[i] == pat[0])
+//         {
+//             for (int j = 1; j < pat.size(); j++)
+//             {
+//                 if (myString[i + j] != pat[j])
+//                 {
+//                     break;
+//                 }
+//                 else if (j == pat.size() - 1)
+//                 {
+//                     return 1;
+//                 }
+//                 else
+//                 {
+//                     continue;
+//                 }
+//             }
+//         }
+//     }
+//     return 0;
+// }
 
 #pragma endregion
