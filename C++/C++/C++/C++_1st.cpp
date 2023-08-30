@@ -3257,3 +3257,123 @@
 // }
 
 #pragma endregion
+
+#pragma region 원하는 문자열 찾기
+
+// #include <string>
+// #include <vector>
+// 
+// using namespace std;
+// 
+// bool next(char mS, char p)
+// {
+//     if (mS == p)
+//         return true;
+//     else if (mS == p + 32)
+//         return true;
+//     else if (mS == p - 32)
+//         return true;
+//     else
+//         return false;
+// }
+// 
+// int solution(string myString, string pat)
+// {
+//     for (int i = 0; i < myString.size(); i++)
+//     {
+//         if (next(myString[i], pat[0]) == true)
+//         {
+//             for (int j = 0; j < pat.size(); j++)
+//             {
+//                 if (next(myString[i + j], pat[j]) == true)
+//                 {
+//                     if (j + 1 == pat.size())
+//                         return 1;
+//                     continue;
+//                 }
+//                 else
+//                 {
+//                     break;
+//                 }
+//             }
+//         }
+//     }
+//     return 0;
+// }
+
+#pragma endregion
+
+#pragma region 부분 문자열
+
+// #include <string>
+// 
+// using namespace std;
+// 
+// int solution(string str1, string str2)
+// {
+//     for (int i = 0; i < str2.size(); i++)
+//     {
+//         if (str2[i] == str1[0])
+//         {
+//             int count = 1;
+//             for (int j = 1; j < str1.size(); j++)
+//             {
+//                 if (str2[i + j] == str1[j])
+//                 {
+//                     count++;
+//                 }
+//                 else
+//                 {
+//                     break;
+//                 }
+//             }
+//             if (count == str1.size())
+//                 return 1;
+//         }
+//     }
+// 
+//     return 0;
+// }
+
+#pragma endregion
+
+#pragma region 배열 비교하기
+
+// #include <vector>
+// 
+// using namespace std;
+// 
+// int sum(vector<int> arr)
+// {
+//     int result = 0;
+//     for (int i = 0; i < arr.size(); i++)
+//     {
+//         result += arr[i];
+//     }
+//     return result;
+// }
+// 
+// int solution(vector<int> arr1, vector<int> arr2)
+// {
+//     if (arr1.size() > arr2.size())
+//         return 1;
+//     else if (arr1.size() < arr2.size())
+//         return -1;
+//     else
+//     {
+//         if (sum(arr1) > sum(arr2))
+//             return 1;
+//         else if (sum(arr1) < sum(arr2))
+//             return -1;
+//         else
+//             return 0;
+//     }
+// }
+
+#pragma endregion
+
+#pragma region 특정한 문자를 대문자로 바꾸기
+
+
+
+#pragma endregion

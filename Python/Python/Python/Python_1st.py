@@ -221,7 +221,25 @@ def solution(strlist):
 
 '''
 
-# 
+# 편지
+'''
+
+def solution(message):
+    return len(message) * 2
+
+'''
+
+# 배열 두 배 만들기
+'''
+
+def solution(numbers):
+    for i in range(0, len(numbers)):
+        numbers[i] *= 2
+    return numbers
+
+'''
+
+# 특정 문자 제거하기
 '''
 
 
