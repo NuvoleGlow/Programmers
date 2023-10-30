@@ -3377,3 +3377,82 @@
 
 
 #pragma endregion
+
+#pragma region 뒤에서 5등 위로
+
+// #include <vector>
+// #include <algorithm>
+// 
+// using namespace std;
+// 
+// vector<int> solution(vector<int> num_list)
+// {
+// 	vector<int> answer;
+// 	sort(num_list.begin(), num_list.end());
+// 	for (int i = 0; i < num_list.size(); i++)
+// 	{
+// 		if (i < 5)
+// 			continue;
+// 		answer.push_back(num_list[i]);
+// 	}
+// 	return answer;
+// }
+
+#pragma endregion
+
+#pragma region 순서 바꾸기
+// 
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<int> solution(vector<int> num_list, int n)
+// {
+//     vector<int> answer;
+//     vector<int> holder;
+// 
+//     for (int i = 0; i < n; i++)
+//     {
+//         holder.push_back(num_list[i]);
+//     }
+// 
+//     for (int i = n; i < num_list.size(); i++)
+//     {
+//         answer.push_back(num_list[i]);
+//     }
+// 
+//     for (int i = 0; i < holder.size(); i++)
+//     {
+//         answer.push_back(holder[i]);
+//     }
+// 
+//     return answer;
+// }
+// 
+#pragma endregion
+
+#pragma region 홀짝에 따라 다른 값 반환하기
+// 
+// using namespace std;
+// 
+// int solution(int n)
+// {
+//     int answer = 0;
+//     if (n % 2 == 0)
+//     {
+//         for (int i = 2; i <= n; i += 2)
+//         {
+//             answer += i * i;
+//         }
+//     }
+//     else
+//     {
+//         for (int i = 1; i <= n; i += 2)
+//         {
+//             answer += i;
+//         }
+//     }
+//     return answer;
+// }
+// 
+#pragma endregion
