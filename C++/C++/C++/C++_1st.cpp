@@ -3456,3 +3456,57 @@
 // }
 // 
 #pragma endregion
+
+#pragma region 배열의 원소만큼 추가하기
+// 
+// #include <vector>
+// 
+// using namespace std;
+// 
+// vector<int> solution(vector<int> arr)
+// {
+//     vector<int> answer;
+// 
+//     for (int i = 0; i < arr.size(); i++)
+//     {
+//         for (int j = 0; j < arr[i]; j++)
+//         {
+//             answer.push_back(arr[i]);
+//         }
+//     }
+// 
+//     return answer;
+// }
+// 
+#pragma endregion
+
+#pragma region 0 떼기
+// 
+// #include <string>
+// 
+// using namespace std;
+// 
+// string solution(string n_str)
+// {
+//     string answer = "";
+//     bool start = false;
+// 
+//     for (int i = 0; i < n_str.size(); i++)
+//     {
+//         if (n_str[i] == '0' && start == false)
+//             continue;
+//         else if (n_str[i] != '0')
+//             start = true;
+//         answer.push_back(n_str[i]);
+//     }
+// 
+//     return answer;
+// }
+// 
+#pragma endregion
+
+#pragma region 문자열 붙여서 출력하기
+
+
+
+#pragma endregion
